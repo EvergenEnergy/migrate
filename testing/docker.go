@@ -14,7 +14,6 @@ import (
 	"strconv"
 	"strings"
 	"testing"
-	"time"
 
 	dockertypes "github.com/docker/docker/api/types"
 	dockercontainer "github.com/docker/docker/api/types/container"
@@ -286,10 +285,6 @@ type dockerImagePullOutput struct {
 	} `json:"progressDetail"`
 	Id       string `json:"id"`
 	Progress string `json:"progress"`
-}
-
-func init() {
-	rand.New(rand.NewSource(time.Now().UnixNano()))
 }
 
 func pseudoRandStr(n int) string {
